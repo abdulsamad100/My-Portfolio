@@ -5,15 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="">
+    <link rel="shortcut icon" href="./images/me.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Abdul Samad</title>
 </head>
 
 <body>
+    <div id="sidebar">
+        <img src="images/menuimg.png" id="menu"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions">
+        <div class="offcanvas offcanvas-start"  data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>Try scrolling the rest of the page to see this option in action.</p>
+            </div>
+        </div>
+    </div>
+
     <div id="navbar" class="container">
         <a href="" id="o1">HOME</a>
         <a href="" id="o2">ABOUT</a>
@@ -22,37 +38,173 @@
         <a href="" id="o5">CONTACT</a>
     </div>
 
+    <div id="navbar-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
 
     <div id="heroimg">
         <img src="images/me.png" alt="">
     </div>
 
-    <img src="./images/herobg.jpg" id="herobg" alt="">
+    <div>
+        <img src="./images/herobg.jpg" id="herobg" alt="">
+        <img src="./images/herobg.jpg" id="herobg" alt="">
+        <div id="lastimg">
+            <img src="./images/herobg.jpg" id="herobg" alt="">
+        </div>
+    </div>
 
     <div id="verticle-line">
     </div>
 
-    <h1 id="hero-heading"><span>Hello there, This is me...</span><br><br><span id="name"><b>Abdul Samad</b></span><br>
+    <h1 id="hero-heading">
+        <span>Hello there, This is me...</span><br><br><span id="name"><b class="animate__wobble">Abdul
+                Samad&nbsp;</b></span><br>
         <span class="typing-text" id="role1"><a href="#gcontain" class="mainlink">I am a Web Developer <i
                     class="fa-solid fa-arrow-down"></i></a></span>
-        <br><span class="typing-text" id="role2"><a href="#gcontain" class="mainlink">I am a Programmer <i
+        <br><span class="typing-text" id="role2"><a href="#gcontain2" class="mainlink">I am a Programmer <i
                     class="fa-solid fa-arrow-down"></i></a></span>
-        <br><span class="typing-text" id="role3"><a href="#gcontain" class="mainlink">I am a Graphic Designer <i
+        <br><span class="typing-text" id="role3"><a href="#gcontain3" class="mainlink">I am a Graphic Designer <i
                     class="fa-solid fa-arrow-down"></i></a></span>
     </h1>
 
+    <div class="container" id="allcontain">
+        <div class="container" id="gcontain">
+            <br><br>
+            <h1 class="container" class="headings"><strong>Web Developer</strong></h1>
+            <p class="container" id="p1">My proficiency in HTML and CSS allows me to design visually appealing and
+                responsive websites that adapt
+                seamlessly to various devices and screen sizes. I take pride in my attention to detail and strive to
+                create
+                polished designs that not only look great but also prioritize accessibility and user experience. <br><a
+                    href="https://github.com/abdulsamad100" class="txtcolorize"><b>Click Here to Check my Github
+                        Profile</b></a></p>
+        </div>
 
-    <div class="container" id="gcontain">
-        <br><br>
-        <h1 class="container" class="headings"><strong>Web Developer</strong></h1>
-        <p class="container">my proficiency in HTML and CSS allows me to design visually appealing and responsive websites that adapt
-            seamlessly to various devices and screen sizes. I take pride in my attention to detail and strive to create
-            polished designs that not only look great but also prioritize accessibility and user experience.</p>
+        <div>
+            <div id="minih">
+                <h1 class="headings"><strong>Languages</strong></h1>
+            </div>
+
+            <div id="lcards1" class="container">
+                <div id="lcard">
+                    <img src="images/html.png" alt="">
+                    <hr>
+                    <h4><b>HTML</b></h4>
+                </div>
+                <div id="lcard">
+                    <img src="images/CSS3_logo.png" alt="" id="imgissue">
+                    <hr>
+                    <h4><b>CSS</b></h4>
+                </div>
+                <div id="lcard">
+                    <img src="images/JS.png" alt="">
+                    <hr>
+                    <h4><b>Javascript</b></h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container" id="gcontain2">
+            <h1 class="container" class="headings"><strong>Programmer</strong></h1>
+            <p class="container" id="p1">C Programming:
+                Solid foundation in low-level programming and efficient memory management.
+                <br>Java Development:
+                Experience in creating scalable and maintainable solutions for enterprise applications, web development,
+                and
+                Android apps.<br>
+            </p>
+        </div>
+
+        <div>
+            <div id="minih">
+                <h1 class="headings"><strong>Languages</strong></h1>
+            </div>
+
+            <div id="lcards1" class="container">
+                <div id="lcard">
+                    <img src="images/Clogo.png" alt="">
+                    <hr>
+                    <h4><b>C</b></h4>
+                </div>
+                <div id="lcard">
+                    <img src="images/Java.png" alt="" id="imgissue">
+                    <hr>
+                    <h4><b>Java</b></h4>
+                </div>
+                <div id="lcard">
+                    <img src="images/py.png" alt="">
+                    <hr>
+                    <h4><b>Python</b></h4>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container" id="gcontain3">
+            <br><br>
+            <h1 class="container" class="headings"><strong>Graphic Designer</strong></h1>
+            <p class="container" id="p1">Welcome to my design portfolio! I specialize in creating captivating content
+                across
+                Packaging Design: Turning concepts into market-ready products with visually appealing packaging.
+                Logo Design: Creating memorable logos that embody your brand's identity.
+                Explore my portfolio to see how I've brought ideas to life in social media, packaging, and logos. Let's
+                collaborate to visually enhance your brand!
+                Contact me for unique social media campaigns, distinctive packaging, or brand-defining logos. Excited to
+                bring your visions to life through the power of design.</p>
+        </div>
+        <section>
+            <div>
+                <div id="minih">
+                    <h1 class="headings"><strong>Softwares</strong></h1>
+                </div>
+
+                <div id="lcards1" class="container">
+                    <div id="lcard">
+                        <img src="images/pslogo.png" alt="">
+                        <hr>
+                        <h4><b>Photoshop</b></h4>
+                    </div>
+                    <div id="lcard">
+                        <img src="images/ailogo.png" alt="" id="imgissue">
+                        <hr>
+                        <h4><b>Illustrator</b></h4>
+                    </div>
+                    <div id="lcard">
+                        <img src="images/idlogo.png" alt="">
+                        <hr>
+                        <h4><b>Indesign</b></h4>
+                    </div>
+
+                </div>
+
+            </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <section id="contact">
+        <div class="contact-container container">
+            <div class="contact-image">
+                <img src="images/me.jpg" alt="">
+            </div>
+            <div class="form-container">
+                <h2>Contact Me</h2>
+                <input type="text" name="" id="" placeholder="Name">
+                <input type="email" name="" id="" placeholder="E-Mail">
+                <textarea name="" id="tarea" cols="30" rows="10" placeholder="Type Your Message Here"></textarea>
+                <br><a href="#" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <footer>
+            <h2><b>My Portfolio &copy; All rights reserved</b></h2>
+        </footer>
+    </section>
+
 </body>
 
 </html>

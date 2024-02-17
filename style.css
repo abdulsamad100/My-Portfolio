@@ -1,23 +1,49 @@
-:root{
-    --greencolor:rgb(125, 255, 202);
-    --txtcolor:rgb(0,0,0);
-    --whitecolor:white;
-}
-html,
-body {
-    background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+:root {
+    --greencolor: rgb(125, 255, 202);
+    --txtcolor: rgb(0, 0, 0);
+    --whitecolor: white;
+    --darkblue: rgb(20, 27, 45);
 }
 
+html,
+body {
+    background-repeat: repeat-y;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--darkblue);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+#navbar-toggle{
+    display: none;
+}
 #navbar a {
     text-decoration: none;
     font: 20px;
     padding-left: 40px;
     padding-right: 40px;
-    color: white;
+    color: var(--whitecolor);
     padding-top: 20px;
     margin-bottom: 20px;
     padding-bottom: 20px;
+}
+#menu{
+    position: absolute;
+    top: 3%;
+    left: 2%;
+    height: 30px;
+}
+#offcanvasWithBothOptions{
+    background-color: var(--darkblue);
+}
+.offcanvas-header .btn-close {
+    color: var(--whitecolor);
+}
+
+#offcanvasWithBothOptionsLabel{
+    color: var(--whitecolor);
 }
 
 #navbar {
@@ -37,11 +63,12 @@ body {
     width: 450px;
     height: auto;
     position: absolute;
-    right: 15%;
+    right: 13%;
     top: 180px;
 }
 
 #herobg {
+    display: block;
     width: 100%;
 }
 
@@ -49,8 +76,16 @@ body {
     border-bottom: 4px solid var(--greencolor);
 }
 
+#o1,
+#o2,
+#o3,
+#o4 {
+    transition: .5s;
+    background-color: rgb(0, 0, 0, 0);
+}
+
 #o1:hover {
-    transition: .2s ease-in;
+    transition: .5s ease-in;
     background-color: var(--greencolor);
     color: var(--txtcolor);
 }
@@ -78,54 +113,370 @@ body {
     background-color: var(--greencolor);
     color: var(--txtcolor);
 }
-#verticle-line{
+
+#verticle-line {
     position: absolute;
     z-index: 4;
     top: 270px;
-    left: 15%;
+    left: 13%;
     width: 7px;
     height: 300px;
     background-color: var(--greencolor);
 }
-#hero-heading{
+
+#hero-heading {
     position: absolute;
-    left: 17%;
+    left: 16%;
     top: 270px;
     color: var(--greencolor);
 }
-#hero-heading>span{
+
+#hero-heading>span {
     font-size: 30px;
 }
-#hero-heading>#name{
+
+#hero-heading>#name {
     position: absolute;
     top: 70px;
     font-size: 50px;
+    overflow: hidden;
+    border-right: .13em solid var(--greencolor);
+    white-space: nowrap;
+    animation:
+        typing 3.5s steps(27, end),
+        blink-caret .5s step-end infinite;
 }
-#hero-heading .typing-text {
-    animation-duration: 2s;
-}
-#gcontain{
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--greencolor) }
+  }
+
+#allcontain {
     position: absolute;
-    top: 655px;
+    top: 640px;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+#gcontain {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 90%;
-    height: 300px;
+    height: max-content;
     background-color: var(--greencolor);
     border-radius: 30px;
     text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
 }
-.fa-solid{
-    text-decoration: none;
+
+#gcontain2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: max-content;
+    background-color: var(--greencolor);
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+#gcontain3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    height: max-content;
+    background-color: var(--greencolor);
+    border-radius: 30px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.fa-solid {
     color: var(--greencolor);
 }
-.fa-solid:hover{
+
+.fa-solid:hover {
+    transition: .5s;
     color: var(--whitecolor);
 }
-.mainlink{
+
+.txtcolorize {
+    text-decoration: none;
+    color: var(--txtcolor);
+}
+
+.mainlink {
     text-decoration: none;
     color: var(--greencolor);
 }
-.headings{
+
+.mainlink:hover {
+    transition: .5s;
+    color: var(--whitecolor);
+}
+
+.headings {
     font-weight: 800;
+}
+
+#p1 {
+    font-size: 20px;
+}
+
+#minih {
+    color: var(--greencolor);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: var(--greencolor);
+    width: 200px;
+    height: 200px;
+}
+
+#lcards1 {
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#lcard {
+    transition: .5s;
+    margin-bottom: 20px;
+    background-color: var(--greencolor);
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#lcard:hover {
+    transition: .5s;
+    box-shadow: 0px 0px 10px 3px rgb(0, 0, 0);
+    width: 205px;
+    height: 205px;
+}
+
+#lcard>img {
+    width: 90px;
+}
+
+#imgissue {
+    width: 100px;
+}
+
+#lastimg {
+    z-index: -5;
+}
+
+#footer {
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    color: var(--txtcolor);
+    background-color: var(--greencolor);
+    height: 100px;
+
+}
+
+#contact {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: block;
+    top: 2300px;
+    padding: 5rem 0;
+    margin-top: auto;
+}
+
+.contact-container {
+    display: flex;
+    background: var(--greencolor);
+    
+    border-radius: 20px;
+}
+
+.contact-image {
+    width: 50%;
+}
+
+.contact-image img {
+    display: block;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.form-container {
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+.form-container input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    outline: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 450;
+}
+
+.form-container textarea {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+}
+
+.form-container h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.form-container a {
+    font-size: 1.2rem;
+}
+
+#tarea {
+    height: 80px;
+}
+
+@media screen and (max-width: 1400px) {
+    #footer {
+        position: absolute;
+        top: 450%;
+    }
+    #contact {
+        position: absolute;
+        top: 340%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #heroimg img {
+        width: 400px;
+    }
+
+    .typing-text a {
+        font-size: 20px;
+    }
+
+    #footer {
+        position: absolute;
+        top: 450%;
+    }
+
+}
+
+@media screen and (max-width: 991px){
+    #heroimg{
+        display: none;
+    }
+    #hero-heading{
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #verticle-line{
+        display: none;
+    }
+    #name{
+        left: 50%;
+        transform: translateX(-50%);    
+        width: max-content;
+        top: 0;
+    }
+    #hero-heading{
+        width: 58%;
+    }
+    
+    #contact {
+        position: absolute;
+        top: 365%;
+    }
+    #footer {
+        position: absolute;
+        top: 470%;
+    }
+}
+@media screen and (max-width: 913px){
+    #contact {
+        position: absolute;
+        top: 460%;
+    }
+    #footer {
+        position: absolute;
+        top: 570%;
+    }
+}    
+@media screen and (max-width: 768px){
+    #contact {
+        position: absolute;
+        top: 500%;
+    }
+    #footer {
+        position: absolute;
+        top: 580%;
+    }
+    .contact-image {
+        display: none;
+    }
+    .form-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        width: 80%;
+    }
+    .form-container input{
+        width: 300%;
+    }
+    .btn{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 630px){
+    #contact {
+        position: absolute;
+        top: 590%;
+    }
+    #footer {
+        position: absolute;
+        top: 665%;
+    }
+}
+@media screen and (max-width: 600px) {
+    
 }
